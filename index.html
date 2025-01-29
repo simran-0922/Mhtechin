@@ -1,66 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punch In/Out Screen</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="profile">
-        <img src="images/image.png" alt="Profile" class="profile-img">
-        <div>
-          <h1 class="name">HEY JHONE DOE</h1>
-          <p class="id">MZ001234</p>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="image.png" alt="Profile" class="profile-img">
+            <div class="profile-details">
+                <span class="profile-name">HEY JHONE DOE</span>
+                <span class="profile-id">MZ001234</span>
+            </div>
+            <button class="profile-refresh">
+                <img src="Vector.png" alt="Refresh">
+            </button>
         </div>
-      </div>
-      <button class="refresh-btn">
-        <img src="images/refresh.png" alt="Refresh" class="refresh-icon">
-      </button>
-    </header>
 
-    <main class="main">
-      <h2 class="current-time">09:15 AM</h2>
-      <p class="current-date">Feb 01, 2024 - Thursday</p>
-      <div class="punch-button">
-        <button id="punch-in" class="punch-in-btn">
-          <img src="images/punch.png" alt="Punch In">
-          <span>PUNCH IN</span>
-        </button>
-      </div>
-      <div class="details">
-        <div class="detail">
-          <img src="images/punchin.png" alt="Clock In">
-          <p class="time">09:08 AM</p>
-          <p class="label">Punch In</p>
+        <!-- Time Section -->
+        <div class="time-display">
+            <h1 id="time">09:15 AM</h1>
+            <p id="date">Feb 01, 2024 - Thursday</p>
         </div>
-        <div class="detail">
-          <img src="images/punchout.png" alt="Clock Out">
-          <p class="time">06:05 PM</p>
-          <p class="label">Punch Out</p>
-        </div>
-        <div class="detail">
-          <img src="images/totalhours.png" alt="Total Hours">
-          <p class="time">08:13</p>
-          <p class="label">Total Hours</p>
-        </div>
-      </div>
-    </main>
 
-    <footer class="footer">
-      <button class="nav-btn active">
-        <span>HOME</span>
-      </button>
-      <button class="nav-btn">
-        <span>MENU</span>
-      </button>
-      <button class="nav-btn">
-        <span>CALENDAR</span>
-      </button>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+        <!-- Punch Button -->
+        <div class="circle-button" id="punch-button">
+            <div class="punch-content">
+                <img src="Group 1.png" alt="Punch In Icon" id="punch-icon">
+                <p id="punch-status">PUNCH IN</p>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info">
+            <div class="info-item">
+                <img src="PunchIn.png" alt="Punch In" class="info-icon">
+                <div class="info-details">
+                    <span class="info-time" id="punch-in-time">09:08 AM</span>
+                    <span class="info-label">Punch In</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <img src="Group.png" alt="Punch Out" class="info-icon">
+                <div class="info-details">
+                    <span class="info-time" id="punch-out-time">06:05 PM</span>
+                    <span class="info-label">Punch Out</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <img src="Group (1).png" alt="Total Hours" class="info-icon">
+                <div class="info-details">
+                    <span class="info-time" id="total-hours">08:13</span>
+                    <span class="info-label">Total Hours</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="home-rectangle active">
+                <img src="Vector (2).png" alt="Home" class="nav-icon">
+                <span class="home-text">HOME</span>
+            </div>
+            <div class="nav-item">
+                <img src="Vector (3).png" alt="Menu" class="nav-icon">
+                <span class="dashboard-text">DASHBOARD</span>
+            </div>
+            <div class="nav-item">
+                <img src="Vector (4).png" alt="Calendar" class="nav-icon">
+                <span class="calender-text">CALENDER</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
