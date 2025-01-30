@@ -16,34 +16,36 @@
           <p class="id">MZ001234</p>
         </div>
       </div>
-      <button class="refresh-btn">
+      <button class="refresh-btn" onclick="refreshPage()">
         <img src="images/refresh.png" alt="Refresh" class="refresh-icon">
       </button>
     </header>
 
     <main class="main">
-      <h2 class="current-time">09:15 AM</h2>
-      <p class="current-date">Feb 01, 2024 - Thursday</p>
+      <div class="time-container">
+        <h2 class="current-time" id="current-time">09:15 AM</h2>
+        <p class="current-date" id="current-date">Feb 01, 2024 - Thursday</p>
+      </div>
       <div class="punch-button">
-        <button id="punch-in" class="punch-in-btn">
+        <button id="punch-in" class="punch-in-btn" onclick="punchInOut()">
           <img src="images/punch.png" alt="Punch In">
-          <span>PUNCH IN</span>
+          <span id="punch-text">PUNCH IN</span>
         </button>
       </div>
       <div class="details">
         <div class="detail">
           <img src="images/punchin.png" alt="Clock In">
-          <p class="time">09:08 AM</p>
+          <p class="time" id="punch-in-time">--:-- --</p>
           <p class="label">Punch In</p>
         </div>
         <div class="detail">
           <img src="images/punchout.png" alt="Clock Out">
-          <p class="time">06:05 PM</p>
+          <p class="time" id="punch-out-time">--:-- --</p>
           <p class="label">Punch Out</p>
         </div>
         <div class="detail">
           <img src="images/totalhours.png" alt="Total Hours">
-          <p class="time">08:13</p>
+          <p class="time" id="total-hours">00:00</p>
           <p class="label">Total Hours</p>
         </div>
       </div>
